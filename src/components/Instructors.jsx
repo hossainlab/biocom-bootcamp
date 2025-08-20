@@ -1,4 +1,6 @@
-const Instructors = () => {
+import { memo } from 'react';
+
+const Instructors = memo(() => {
   const instructors = [
     {
       name: "Md. Jubayer Hossain",
@@ -105,17 +107,18 @@ const Instructors = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {instructors.map((instructor, index) => (
-            <div key={index} className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-600 hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
+            <div key={index} className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-600 hover:bg-gray-800 hover:shadow-2xl hover:border-blue-500/50 transition-all duration-200 will-change-transform hover:scale-105 hover:-translate-y-2 cursor-pointer group">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 mx-auto mb-4 group-hover:scale-110 transition-all duration-300">
+                <div className="w-24 h-24 mx-auto mb-4 group-hover:scale-110 transition-transform duration-200 will-change-transform">
                   <img 
                     src={instructor.image} 
                     alt={instructor.name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-gray-600 group-hover:border-blue-400 transition-all duration-300"
+                    loading="lazy"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-gray-600 group-hover:border-blue-400 transition-colors duration-200"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">{instructor.name}</h3>
-                <p className="text-blue-400 font-semibold text-sm mb-4 group-hover:text-purple-400 transition-colors duration-300">{instructor.title}</p>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">{instructor.name}</h3>
+                <p className="text-blue-400 font-semibold text-sm mb-4 group-hover:text-purple-400 transition-colors duration-200">{instructor.title}</p>
               </div>
               
               <p className="text-gray-300 text-sm leading-relaxed mb-6">{instructor.bio}</p>
@@ -149,6 +152,6 @@ const Instructors = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Instructors;

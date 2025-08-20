@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import PartnershipForm from './PartnershipForm';
 
-const Partners = () => {
+const Partners = memo(() => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const sponsorSlots = [
     {
@@ -68,10 +68,10 @@ const Partners = () => {
             {sponsorSlots.filter(slot => slot.type === "university").map((slot, index) => (
               <div
                 key={index}
-                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:border-blue-500/50 transition-all duration-200 will-change-transform hover:scale-105 hover:-translate-y-2"
               >
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border-2 border-dashed border-blue-400/50">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 will-change-transform border-2 border-dashed border-blue-400/50">
                     <span className="text-blue-400/70 font-bold text-sm">LOGO</span>
                   </div>
                   <h4 className="text-xl font-bold text-gray-400 mb-4 group-hover:text-blue-400 transition-colors">
@@ -91,10 +91,10 @@ const Partners = () => {
             {sponsorSlots.filter(slot => slot.type === "industry").map((slot, index) => (
               <div
                 key={index}
-                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-green-500/50 transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:border-green-500/50 transition-all duration-200 will-change-transform hover:scale-105 hover:-translate-y-2"
               >
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-500/30 to-blue-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border-2 border-dashed border-green-400/50">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500/30 to-blue-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 will-change-transform border-2 border-dashed border-green-400/50">
                     <span className="text-green-400/70 font-bold text-sm">LOGO</span>
                   </div>
                   <h4 className="text-xl font-bold text-gray-400 mb-4 group-hover:text-green-400 transition-colors">
@@ -115,13 +115,14 @@ const Partners = () => {
               <a
                 key={index}
                 href={host.url}
-                className="group bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl border border-gray-600 hover:from-gray-700 hover:to-gray-800 hover:shadow-2xl hover:scale-105 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+                className="group bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl border border-gray-600 hover:from-gray-700 hover:to-gray-800 hover:shadow-2xl hover:border-purple-500/50 transition-all duration-200 will-change-transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
               >
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 p-2 shadow-lg">
+                  <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 will-change-transform p-2 shadow-lg">
                     <img 
                       src={host.logo} 
                       alt={`${host.name} Logo`}
+                      loading="lazy"
                       className="w-full h-full object-contain rounded-xl"
                     />
                   </div>
@@ -136,7 +137,7 @@ const Partners = () => {
         </div>
 
         {/* Become a Sponsor */}
-        <div className="text-center bg-gray-900 border border-gray-700 rounded-2xl p-12 hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group">
+        <div className="text-center bg-gray-900 border border-gray-700 rounded-2xl p-12 hover:bg-gray-800 hover:shadow-2xl hover:border-purple-500/50 transition-all duration-200 will-change-transform hover:scale-105 cursor-pointer group">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Want to Become a Sponsor?</h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Join our community of forward-thinking institutions and companies shaping the future of bioinformatics education.
@@ -160,6 +161,6 @@ const Partners = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Partners;
