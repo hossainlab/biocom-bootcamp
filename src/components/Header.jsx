@@ -14,7 +14,6 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-white leading-none">BioCom BootCamp</h1>
-              <p className="text-sm text-gray-300 font-medium">Career Awareness Day</p>
             </div>
           </a>
 

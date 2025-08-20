@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <p className="text-blue-400 font-semibold text-lg mb-6 tracking-wide">
-            DeepBio Limited & CHIRAL Bangladesh Present
+            DeepBio Limited & CHIRAL Bangladesh Presents
           </p>
           
           <div className="mb-8">
@@ -16,7 +16,7 @@ const Hero = () => {
             </h1>
             <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 rounded-full">
               <p className="text-white font-semibold text-lg">
-                🚀 Intensive Career Development Experience
+                🚀 Bioinformatics and Computational Biology Bootcamp
               </p>
             </div>
           </div>
@@ -79,10 +79,6 @@ const Hero = () => {
 
           {/* Benefits Text */}
           <div className="max-w-4xl mx-auto">
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Accelerate your career in <strong className="text-blue-400 font-bold">bioinformatics and computational biology</strong> through intensive workshops, 
-              expert mentorship, and hands-on experience. Connect with industry leaders and unlock your potential in biotechnology.
-            </p>
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
               <span className="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">💡 Expert-Led Sessions</span>
               <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full">🤝 Industry Networking</span>
