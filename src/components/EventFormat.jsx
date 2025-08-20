@@ -1,18 +1,18 @@
 const EventFormat = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-700">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Program Format</h2>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            The BioCom BootCamp is a comprehensive 12-month intensive program that transforms participants from beginners 
-            to industry-ready bioinformatics professionals. The program combines theoretical foundations with hands-on projects, 
-            culminating in capstone research and career placement.
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Intensive Bootcamp Program</h2>
+          <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+            The BioCom BootCamp is a comprehensive intensive program that transforms participants from beginners 
+            to industry-ready bioinformatics professionals. Experience accelerated learning through theoretical foundations, hands-on projects, 
+            and direct mentorship from industry experts.
           </p>
           <br />
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            The program will be delivered through live online sessions for global accessibility, with optional in-person 
-            components at partner universities.
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            Delivered through immersive live sessions for global accessibility, with optional in-person 
+            intensive workshops at partner universities.
           </p>
         </div>
       </div>

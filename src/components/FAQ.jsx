@@ -55,26 +55,26 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="py-20 bg-gray-700">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-700">Everything you need to know about the BioCom BootCamp</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+          <p className="text-xl text-gray-300">Everything you need to know about the intensive BioCom BootCamp</p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            <div key={index} className="bg-gray-900 rounded-2xl shadow-xl border border-gray-600 overflow-hidden hover:bg-gray-800 hover:shadow-2xl hover:scale-[1.02] hover:border-blue-500/50 transition-all duration-300 cursor-pointer group">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                className="w-full px-8 py-6 text-left flex justify-between items-center group-hover:bg-gray-700 transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-blue-400 transition-colors duration-300">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   <svg 
-                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
+                    className={`w-5 h-5 text-gray-400 group-hover:text-blue-400 transform transition-all duration-300 ${
                       openFAQ === index ? 'rotate-180' : ''
                     }`}
                     fill="none" 
@@ -88,8 +88,8 @@ const FAQ = () => {
               
               {openFAQ === index && (
                 <div className="px-8 pb-6">
-                  <div className="border-t border-gray-100 pt-6">
-                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <div className="border-t border-gray-700 pt-6">
+                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
               )}
@@ -98,14 +98,14 @@ const FAQ = () => {
         </div>
 
         {/* Contact Support */}
-        <div className="text-center mt-16 bg-white rounded-2xl p-12 shadow-lg">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Still Have Questions?</h3>
-          <p className="text-gray-700 text-lg mb-8">
-            Can't find what you're looking for? Our admissions team is here to help!
+        <div className="text-center mt-16 bg-gray-900 border border-gray-600 rounded-2xl p-12 shadow-xl hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Still Have Questions?</h3>
+          <p className="text-gray-300 text-lg mb-8">
+            Can't find what you're looking for? Our bootcamp team is here to help!
           </p>
           <a
             href="mailto:admissions@biocombootcamp.org"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
           >
             Contact Support
           </a>

@@ -86,47 +86,47 @@ const Schedule = () => {
   };
 
   return (
-    <section id="schedule" className="py-20 bg-gray-50">
+    <section id="schedule" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Event Schedule</h2>
-          <p className="text-xl text-gray-700">A complete timeline of our career awareness bootcamp day</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Bootcamp Schedule</h2>
+          <p className="text-xl text-gray-300">Complete timeline of our intensive career acceleration day</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-700 hover:shadow-2xl hover:border-blue-500/30 transition-all duration-300">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                <tr className="bg-gray-800 border-b border-gray-600">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
                     Type
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
                     Time
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
                     Event
                   </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
                     Format
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody className="divide-y divide-gray-700">
                 {scheduleData.map((item, index) => (
-                  <tr key={index} className="hover:bg-gray-50 transition-colors">
+                  <tr key={index} className="hover:bg-gray-800/80 hover:scale-[1.01] transition-all duration-200 cursor-pointer">
                     <td className="px-6 py-6">
                       <span className={`inline-block px-3 py-1 text-sm font-semibold rounded-full ${getTypeColor(item.type)}`}>
                         {item.type}
                       </span>
                     </td>
-                    <td className="px-6 py-6 text-sm font-medium text-gray-900">
+                    <td className="px-6 py-6 text-sm font-medium text-white">
                       {item.time}
                     </td>
-                    <td className="px-6 py-6 text-sm text-gray-700">
+                    <td className="px-6 py-6 text-sm text-gray-300">
                       {item.event}
                     </td>
-                    <td className="px-6 py-6 text-sm text-gray-600">
+                    <td className="px-6 py-6 text-sm text-gray-400">
                       {item.format}
                     </td>
                   </tr>
@@ -139,28 +139,19 @@ const Schedule = () => {
         {/* Mobile View - Show as Cards on Small Screens */}
         <div className="md:hidden mt-8 space-y-4">
           {scheduleData.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-md">
+            <div key={index} className="bg-gray-900 rounded-lg p-6 shadow-md border border-gray-700 hover:bg-gray-800 hover:shadow-xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 cursor-pointer">
               <div className="flex items-start justify-between mb-3">
                 <span className={`inline-block px-3 py-1 text-sm font-semibold rounded-full ${getTypeColor(item.type)}`}>
                   {item.type}
                 </span>
-                <span className="text-sm font-medium text-gray-900">{item.time}</span>
+                <span className="text-sm font-medium text-white">{item.time}</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">{item.event}</h3>
-              <p className="text-sm text-gray-600">{item.format}</p>
+              <h3 className="font-semibold text-white mb-2">{item.event}</h3>
+              <p className="text-sm text-gray-400">{item.format}</p>
             </div>
           ))}
         </div>
 
-        {/* Expand Button */}
-        <div className="text-center mt-8">
-          <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-            View Detailed Curriculum
-          </button>
-        </div>
       </div>
     </section>
   );
