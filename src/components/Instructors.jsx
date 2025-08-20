@@ -37,6 +37,15 @@ const Instructors = () => {
       }
     },
     {
+      name: "Md. Mohtasim Billah",
+      title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
+      bio: "Mr. Billah is a Research Assistant at Big Bioinformatics Lab, contributing to bioinformatics research and the development of computational tools for healthcare.",
+      image: "/images/speakers/rifat.png",
+      social: {
+        linkedin: "https://www.linkedin.com/in/muhibullah-shahjahan/"
+      }
+    },
+    {
       name: "Muntasim Fuad",
       title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
       bio: "Mr. Fuad is a Research Assistant at Big Bioinformatics Lab, contributing to bioinformatics research and the development of pipeline applications in healthcare.",
@@ -61,6 +70,24 @@ const Instructors = () => {
       image: "/images/speakers/shekhar.jpg",
       social: {
         linkedin: "https://www.linkedin.com/in/shekhar-saha-59b0052b3/"
+      }
+    },
+    {
+      name: "Musab Shahriar",
+      title: "Team Lead, Insilico Medicine, CHIRAL",
+      bio: "Mr. Shahriar is a Team Lead at Insilico Medicine, focusing on the application of artificial intelligence in drug discovery and bioinformatics.",
+      image: "/images/speakers/musab.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/mshahariar/"
+      }
+    },
+    {
+      name: "Pritom Kundu",
+      title: "Team Lead, Insilico Medicine, CHIRAL",
+      bio: "Mr. Kundu is a Team Lead at Insilico Medicine, specializing in the integration of AI and bioinformatics for innovative healthcare solutions.",
+      image: "/images/speakers/pritom.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/mshahariar/"
       }
     },
 
