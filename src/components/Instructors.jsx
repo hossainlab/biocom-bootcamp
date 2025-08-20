@@ -54,6 +54,15 @@ const Instructors = () => {
         linkedin: "https://www.linkedin.com/in/sajjad-hossen-50a34b2b6/"
       }
     },
+    {
+      name: "Shekhar Saha",
+      title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
+      bio: "Mr. Saha is a Research Assistant at Big Bioinformatics Lab, specializing in bioinformatics research and the development of computational tools for healthcare.",
+      image: "/images/speakers/shekhar.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/shekhar-saha-59b0052b3/"
+      }
+    },
 
   ];
 
@@ -61,7 +70,7 @@ const Instructors = () => {
     <section id="speakers" className="py-20 bg-gray-700">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Bootcamp Instructors</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Bootcamp Instructors & Volunteers</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Learn directly from industry leaders, researchers, and educators who will accelerate your understanding of career paths, research opportunities, and the future of bioinformatics.
           </p>
