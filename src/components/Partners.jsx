@@ -1,73 +1,53 @@
+import { useState } from 'react';
+import PartnershipForm from './PartnershipForm';
+
 const Partners = () => {
-  const sponsors = [
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const sponsorSlots = [
     {
-      name: "Stanford University",
-      description: "Leading research university with world-class bioinformatics programs and cutting-edge computational biology research.",
-      logo: "S",
-      url: "#"
+      type: "university",
+      placeholder: "Partner University",
+      description: "Leading research institution specializing in bioinformatics and computational biology",
     },
     {
-      name: "MIT",
-      description: "Pioneer in computational biology and systems biology approaches with strong industry connections.",
-      logo: "MIT", 
-      url: "#"
+      type: "university", 
+      placeholder: "Partner University",
+      description: "Renowned academic institution with cutting-edge genomics programs",
     },
     {
-      name: "Johns Hopkins",
-      description: "Excellence in biomedical research and translational bioinformatics with top medical school partnership.",
-      logo: "JH",
-      url: "#"
+      type: "university",
+      placeholder: "Partner University", 
+      description: "Top-tier university advancing computational biology research",
     },
     {
-      name: "UC San Diego", 
-      description: "Innovative programs in marine genomics and microbiome research with Scripps Institution collaboration.",
-      logo: "UCSD",
-      url: "#"
+      type: "industry",
+      placeholder: "Industry Partner",
+      description: "Leading biotechnology company driving innovation in the field",
     },
     {
-      name: "Harvard University",
-      description: "Cutting-edge research in evolutionary genomics and cancer biology with Dana-Farber partnership.",
-      logo: "H",
-      url: "#"
+      type: "industry",
+      placeholder: "Industry Partner", 
+      description: "Global leader in genomics and bioinformatics solutions",
     },
     {
-      name: "University of Washington",
-      description: "Strong focus on protein structure prediction and drug discovery with Institute for Protein Design.",
-      logo: "UW",
-      url: "#"
-    },
-    {
-      name: "Broad Institute",
-      description: "Leading genomics research institute advancing understanding of human disease through computational approaches.",
-      logo: "BI",
-      url: "#"
-    },
-    {
-      name: "Illumina",
-      description: "Global leader in DNA sequencing and array-based technologies enabling breakthrough discoveries.",
-      logo: "I",
-      url: "#"
-    },
-    {
-      name: "23andMe",
-      description: "Pioneer in direct-to-consumer genetic testing and population genetics research applications.",
-      logo: "23",
-      url: "#"
+      type: "industry",
+      placeholder: "Industry Partner",
+      description: "Pioneer company in computational biology technologies",
     }
   ];
 
   const hosts = [
     {
-      name: "BioCom Institute",
-      description: "BioCom Institute is a leading organization promoting life science education and career development. We connect students with industry opportunities.",
-      logo: "BCI",
-      url: "#"
+      name: "DeepBio Limited",
+      description: "Leading bioinformatics company specializing in AI-driven healthcare solutions and computational biology research.",
+      logo: "/images/partners/deepbio.jpg",
+      url: "https://deepbioltd.com/"
     },
     {
-      name: "Bioinformatics Foundation",
-      description: "Bioinformatics Foundation is making world-class computational biology education accessible globally. Founded to bridge the gap between academia and industry.",
-      logo: "BF",
-      url: "#"
+      name: "CHIRAL Bangladesh",
+      description: "Advancing bioinformatics education and research in Bangladesh through innovative programs and industry collaboration.",
+      logo: "/images/partners/chiral.jpg",
+      url: "https://chiralbd.org/"
     }
   ];
 
@@ -75,9 +55,9 @@ const Partners = () => {
     <section id="partners" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Elite Partners & Sponsors</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Partners & Sponsors</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our bootcamp is powered by leading institutions and companies driving innovation in bioinformatics and computational biology.
+            We are building partnerships with leading institutions and companies. Partner announcements coming soon!
           </p>
         </div>
 
@@ -85,22 +65,21 @@ const Partners = () => {
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">University Partners</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sponsors.slice(0, 6).map((sponsor, index) => (
-              <a
+            {sponsorSlots.filter(slot => slot.type === "university").map((slot, index) => (
+              <div
                 key={index}
-                href={sponsor.url}
-                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <span className="text-white font-bold text-lg">{sponsor.logo}</span>
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border-2 border-dashed border-blue-400/50">
+                    <span className="text-blue-400/70 font-bold text-sm">LOGO</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                    {sponsor.name}
+                  <h4 className="text-xl font-bold text-gray-400 mb-4 group-hover:text-blue-400 transition-colors">
+                    {slot.placeholder}
                   </h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">{sponsor.description}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{slot.description}</p>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -109,22 +88,21 @@ const Partners = () => {
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">Industry Sponsors</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sponsors.slice(6).map((sponsor, index) => (
-              <a
+            {sponsorSlots.filter(slot => slot.type === "industry").map((slot, index) => (
+              <div
                 key={index}
-                href={sponsor.url}
-                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-green-500/50 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <span className="text-white font-bold text-lg">{sponsor.logo}</span>
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500/30 to-blue-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border-2 border-dashed border-green-400/50">
+                    <span className="text-green-400/70 font-bold text-sm">LOGO</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                    {sponsor.name}
+                  <h4 className="text-xl font-bold text-gray-400 mb-4 group-hover:text-green-400 transition-colors">
+                    {slot.placeholder}
                   </h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">{sponsor.description}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{slot.description}</p>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -140,8 +118,12 @@ const Partners = () => {
                 className="group bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 shadow-xl border border-gray-600 hover:from-gray-700 hover:to-gray-800 hover:shadow-2xl hover:scale-105 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
               >
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <span className="text-white font-bold text-lg">{host.logo}</span>
+                  <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 p-2 shadow-lg">
+                    <img 
+                      src={host.logo} 
+                      alt={`${host.name} Logo`}
+                      className="w-full h-full object-contain rounded-xl"
+                    />
                   </div>
                   <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                     {host.name}
@@ -154,18 +136,27 @@ const Partners = () => {
         </div>
 
         {/* Become a Sponsor */}
-        <div className="text-center bg-gray-900 border border-gray-700 rounded-2xl p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Want to Become a Partner?</h3>
+        <div className="text-center bg-gray-900 border border-gray-700 rounded-2xl p-12 hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Want to Become a Sponsor?</h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Join our elite community of forward-thinking institutions and companies shaping the future of bioinformatics bootcamp education.
+            Join our community of forward-thinking institutions and companies shaping the future of bioinformatics education.
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+          <button
+            onClick={() => setIsFormOpen(true)}
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
           >
-            Contact Us
-          </a>
+            Apply for Partnership
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5-5 5M6 12h12"></path>
+            </svg>
+          </button>
         </div>
+
+        {/* Partnership Form Modal */}
+        <PartnershipForm 
+          isOpen={isFormOpen} 
+          onClose={() => setIsFormOpen(false)} 
+        />
       </div>
     </section>
   );

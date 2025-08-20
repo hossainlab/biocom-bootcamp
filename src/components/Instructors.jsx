@@ -4,66 +4,57 @@ const Instructors = () => {
       name: "Md. Jubayer Hossain",
       title: "Founder & CEO, DeepBio Limited / CHIRAL Bangladesh",
       bio: "Mr. Hossain is a founder of DeepBio Limited and CHIRAL Bangladesh, leading initiatives in AI-driven healthcare solutions and bioinformatics education.",
-      image: "/images/speakers/jubayer-hossain.jpg",
+      image: "/images/speakers/jubayer.jpg",
       social: {
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/hossainmj/"
       }
     },
     {
       name: "Tasmim Rahman Adib",
       title: "AI Scientist, DeepBio Limited",
-      bio: "Ms. Adib is an AI Scientist at DeepBio Limited, working on integrating artificial intelligence with bioinformatics to enhance healthcare solutions.",
-      image: "/images/speakers/tasmim-rahman-adib.jpg",
+      bio: "Mr. Adib is an AI Scientist at DeepBio Limited, working on integrating artificial intelligence with bioinformatics to enhance healthcare solutions.",
+      image: "/images/speakers/adib.jpg",
       social: {
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/tasmim-rahman-adib-403074221/"
       }
     },
     {
       name: "Md. Wahidul Islam",
       title: "Group Leader, Wet Lab, CHIRAL",
       bio: "Mr. Islam is a microbiologist at DeepBio Limited, specializing in microbial genomics and its applications in healthcare.",
-      image: "/images/speakers/wahidul-islam.jpg",
+      image: "/images/speakers/wahidul.jpg",
       social: {
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/islammw/"
       }
     },
     {
-      name: "Md. Muhibullah Shahjan",
+      name: "Muhibullah Shahjan",
       title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
       bio: "Mr. Shahjan is a Research Assistant at Big Bioinformatics Lab, focusing on bioinformatics research and data analysis to support healthcare innovations.",
-      image: "/images/speakers/muhibullah-shahjan.jpg",
+      image: "/images/speakers/muhib.jpg",
       social: {
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/muhibullah-shahjahan/"
       }
     },
     {
       name: "Muntasim Fuad",
       title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
       bio: "Mr. Fuad is a Research Assistant at Big Bioinformatics Lab, contributing to bioinformatics research and the development of pipeline applications in healthcare.",
-      image: "/images/speakers/muntasim-fuad.jpg",
+      image: "/images/speakers/fuad.jpeg",
       social: {
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/muntasim-fuad/"
       }
     },
     {
-      name: "Musab Shahriar",
-      title: "Team Lead, Insilico Medicine, CHIRAL",
-      bio: "Mr. Shahriar is a Team Lead at Insilico Medicine, focusing on AI applications in drug discovery and bioinformatics.",
-      image: "/images/speakers/musab-shahriar.jpg",
+      name: "Sajjad Hossain",
+      title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
+      bio: "Mr. Hossain is a Research Assistant at Big Bioinformatics Lab, focusing on bioinformatics research and the development of innovative solutions in healthcare.",
+      image: "/images/speakers/sajjad.jpg",
       social: {
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/sajjad-hossen-50a34b2b6/"
       }
     },
-    {
-      name: "Pritom Kundu",
-      title: "Team Lead, Insilico Medicine, CHIRAL",
-      bio: "Mr. Kundu is a Team Lead at Insilico Medicine, specializing in computational biology and its applications in drug development.",
-      image: "/images/speakers/pritom-kundu.jpg",
-      social: {
-        linkedin: "#"
-      }
-    },
-    
+
   ];
 
   return (
@@ -80,10 +71,12 @@ const Instructors = () => {
           {instructors.map((instructor, index) => (
             <div key={index} className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-600 hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <span className="text-white text-2xl font-bold">
-                    {instructor.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="w-24 h-24 mx-auto mb-4 group-hover:scale-110 transition-all duration-300">
+                  <img 
+                    src={instructor.image} 
+                    alt={instructor.name}
+                    className="w-24 h-24 rounded-full object-cover border-4 border-gray-600 group-hover:border-blue-400 transition-all duration-300"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">{instructor.name}</h3>
                 <p className="text-blue-400 font-semibold text-sm mb-4 group-hover:text-purple-400 transition-colors duration-300">{instructor.title}</p>
