@@ -30,7 +30,7 @@ const Instructors = memo(() => {
       }
     },
     {
-      name: "Muhibullah Shahjan",
+      name: "Muhibullah Shahjahan",
       title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
       bio: "Mr. Shahjan is a Research Assistant at Big Bioinformatics Lab, focusing on bioinformatics research and data analysis to support healthcare innovations.",
       image: "/images/speakers/muhib.jpg",
