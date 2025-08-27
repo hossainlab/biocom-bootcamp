@@ -6,13 +6,19 @@ const Partners = memo(() => {
   const sponsorSlots = [
     {
       type: "university",
-      placeholder: "Partner University",
-      description: "Leading research institution specializing in bioinformatics and computational biology",
+      name: "Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka",
+      placeholder: "Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka",
+      description: "Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST) is a leading research institution specializing in bioinformatics and computational biology",
+      logo: "/images/partners/cblast.png",
+      url: "https://du.ac.bd/"
     },
     {
-      type: "university", 
-      placeholder: "Partner University",
-      description: "Renowned academic institution with cutting-edge genomics programs",
+      type: "university",
+      name: "Jagannath University Research and Higher Study Society (JnURHSS)",
+      placeholder: "Jagannath University Research and Higher Study Society (JnURHSS)",
+      description: "Jagannath University Research and Higher Study Society is a non-profit organization which will guide the JnU students on their research and higher studies in home and abroad",
+      logo: "/images/partners/JnURHSS.png",
+      url: "https://jnu.ac.bd/"
     },
     {
       type: "university",
@@ -65,22 +71,38 @@ const Partners = memo(() => {
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">University Partners</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sponsorSlots.filter(slot => slot.type === "university").map((slot, index) => (
-              <div
-                key={index}
-                className="group bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-700 border-dashed hover:bg-gray-800 hover:shadow-2xl hover:border-blue-500/50 transition-all duration-200 will-change-transform hover:scale-105 hover:-translate-y-2"
-              >
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 will-change-transform border-2 border-dashed border-blue-400/50">
-                    <span className="text-blue-400/70 font-bold text-sm">LOGO</span>
+            {sponsorSlots.filter(slot => slot.type === "university").map((slot, index) => {
+              const isActualPartner = slot.logo && slot.url;
+              const Component = isActualPartner ? 'a' : 'div';
+              const extraProps = isActualPartner ? { href: slot.url } : {};
+              
+              return (
+                <Component
+                  key={index}
+                  {...extraProps}
+                  className={`group bg-gray-900 rounded-2xl p-8 shadow-xl border ${isActualPartner ? 'border-gray-600' : 'border-gray-700 border-dashed'} hover:bg-gray-800 hover:shadow-2xl hover:border-blue-500/50 transition-all duration-200 will-change-transform hover:scale-105 hover:-translate-y-2 ${isActualPartner ? 'cursor-pointer' : ''}`}
+                >
+                  <div className="text-center">
+                    <div className={`w-20 h-20 ${isActualPartner ? 'bg-white' : 'bg-gradient-to-r from-blue-500/30 to-purple-600/30'} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 will-change-transform ${isActualPartner ? 'p-2 shadow-lg' : 'border-2 border-dashed border-blue-400/50'}`}>
+                      {isActualPartner ? (
+                        <img 
+                          src={slot.logo} 
+                          alt={`${slot.name} Logo`}
+                          loading="lazy"
+                          className="w-full h-full object-contain rounded-xl"
+                        />
+                      ) : (
+                        <span className="text-blue-400/70 font-bold text-sm">LOGO</span>
+                      )}
+                    </div>
+                    <h4 className={`text-xl font-bold mb-4 group-hover:text-blue-400 transition-colors ${isActualPartner ? 'text-white' : 'text-gray-400'}`}>
+                      {slot.placeholder}
+                    </h4>
+                    <p className={`text-sm leading-relaxed ${isActualPartner ? 'text-gray-300' : 'text-gray-500'}`}>{slot.description}</p>
                   </div>
-                  <h4 className="text-xl font-bold text-gray-400 mb-4 group-hover:text-blue-400 transition-colors">
-                    {slot.placeholder}
-                  </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">{slot.description}</p>
-                </div>
-              </div>
-            ))}
+                </Component>
+              );
+            })}
           </div>
         </div>
 
