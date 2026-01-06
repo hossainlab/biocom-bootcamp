@@ -55,7 +55,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gray-700">
+    <section id="faq" className="py-20 bg-gradient-to-br from-gray-900 via-red-950/30 to-gray-900">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Frequently Asked Questions</h2>
@@ -64,51 +64,37 @@ const FAQ = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-gray-900 rounded-2xl shadow-xl border border-gray-600 overflow-hidden hover:bg-gray-800 hover:shadow-2xl hover:scale-[1.02] hover:border-blue-500/50 transition-all duration-300 cursor-pointer group">
+            <div key={index} className="bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl border border-red-900/50 overflow-hidden hover:bg-red-900/20 hover:shadow-2xl hover:scale-[1.02] hover:border-red-500/50 transition-all duration-300 cursor-pointer group">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center group-hover:bg-gray-700 transition-all duration-300"
+                className="w-full px-8 py-6 text-left flex justify-between items-center group-hover:bg-red-900/20 transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-red-400 transition-colors duration-300">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
-                  <svg 
-                    className={`w-5 h-5 text-gray-400 group-hover:text-blue-400 transform transition-all duration-300 ${
+                  <svg
+                    className={`w-5 h-5 text-gray-400 group-hover:text-red-400 transform transition-all duration-300 ${
                       openFAQ === index ? 'rotate-180' : ''
                     }`}
-                    fill="none" 
-                    stroke="currentColor" 
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </button>
-              
+
               {openFAQ === index && (
                 <div className="px-8 pb-6">
-                  <div className="border-t border-gray-700 pt-6">
+                  <div className="border-t border-red-900/50 pt-6">
                     <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        {/* Contact Support */}
-        <div className="text-center mt-16 bg-gray-900 border border-gray-600 rounded-2xl p-12 shadow-xl hover:bg-gray-800 hover:shadow-2xl hover:scale-105 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Still Have Questions?</h3>
-          <p className="text-gray-300 text-lg mb-8">
-            Can't find what you're looking for? Our bootcamp team is here to help!
-          </p>
-          <a
-            href="mailto:admissions@biocombootcamp.org"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
-          >
-            Contact Support
-          </a>
         </div>
       </div>
     </section>

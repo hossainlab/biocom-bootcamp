@@ -2,91 +2,82 @@ import { memo } from 'react';
 
 const Hero = memo(() => {
   return (
-    <section id="home" className="bg-gray-900 py-20 relative">
-      {/* Simplified background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-purple-900/10"></div>
-      
+    <section id="home" className="bg-gradient-to-br from-gray-900 via-red-950 to-black py-20 relative overflow-hidden">
+      {/* Revolutionary background patterns */}
+      <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-red-950/30"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
-          <p className="text-blue-400 font-semibold text-lg mb-6 tracking-wide">
-            DeepBio Limited & CHIRAL Bangladesh Presents
-          </p>
-          
-          <div className="mb-8">
-            <h1 className="text-7xl md:text-9xl font-black text-white mb-4 leading-none bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              BioCom
-            </h1>
-            <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 rounded-full">
-              <p className="text-white font-semibold text-lg">
-                🚀 Bioinformatics and Computational Biology Bootcamp
+        <div className="text-center mb-12">
+          {/* Memorial Section with Photo */}
+          <div className="mb-12">
+            <div className="max-w-4xl mx-auto bg-gradient-to-br from-red-900/30 to-black/50 backdrop-blur-sm border-2 border-red-600/40 rounded-3xl p-8 shadow-2xl">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Photo */}
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-600 to-amber-600 rounded-2xl blur-xl opacity-50"></div>
+                    <img
+                      src="/images/osman-hadi.jpg"
+                      alt="Shahid Sharif Osman Hadi"
+                      className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border-4 border-red-600/60 shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                    />
+                  </div>
+                </div>
+
+                {/* Memorial Text */}
+                <div className="flex-1 text-left">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-1 h-16 bg-gradient-to-b from-red-600 to-amber-600"></div>
+                    <div>
+                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                        Shahid Sharif Osman Hadi
+                      </h2>
+                      <p className="text-red-400 font-semibold text-lg">
+                        Revolutionary Leader & Martyr
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    In loving memory of a brave soul who gave his life for justice and freedom.
+                    This bootcamp honors his revolutionary spirit and dedication to progress.
+                  </p>
+                  <div className="inline-flex items-center gap-2 bg-red-900/40 border border-red-600/40 px-4 py-2 rounded-lg">
+                    <span className="text-2xl">🕊️</span>
+                    <span className="text-amber-400 font-medium">Forever in Our Hearts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Modern Bootcamp Info Section */}
+          <div className="max-w-5xl mx-auto">
+            {/* Organizers */}
+            <div className="mb-8">
+              <p className="text-red-400 font-semibold text-base md:text-lg tracking-wide">
+                DeepBio Limited & CHIRAL Bangladesh Presents
               </p>
             </div>
-          </div>
 
-          {/* Info Cards - Three Cards Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-            {/* Format Card */}
-            <div className="bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700 hover:bg-gray-700 hover:shadow-2xl hover:border-green-500/50 transition-all duration-200 will-change-transform hover:scale-105 cursor-pointer group">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-200 will-change-transform">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors duration-200">Format</h3>
-                <p className="text-gray-300">Hybrid Learning Environment</p>
-              </div>
+            {/* Main Title */}
+            <div className="mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight px-4">
+                <span className="bg-gradient-to-r from-red-400 via-amber-400 to-red-400 bg-clip-text text-transparent">
+                  Bioinformatics BootCamp
+                </span>
+              </h1>
             </div>
 
-            {/* Intensity Card */}
-            <div className="bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700 hover:bg-gray-700 hover:shadow-2xl hover:border-blue-500/50 transition-all duration-200 will-change-transform hover:scale-105 cursor-pointer group">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-200 will-change-transform">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">Intensity</h3>
-                <p className="text-gray-300">Fast-Track Career Prep</p>
+            {/* Memorial Dedication */}
+            <div className="mb-12">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-red-900/30 to-amber-900/30 backdrop-blur-sm border border-red-600/30 px-6 py-3 rounded-full">
+                <span className="text-2xl">🕊️</span>
+                <span className="text-amber-300 font-semibold text-sm md:text-base">
+                  In Memory of Shahid Sharif Osman Hadi
+                </span>
               </div>
-            </div>
-
-            {/* Mission Card */}
-            <div className="bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700 hover:bg-gray-700 hover:shadow-2xl hover:border-purple-500/50 transition-all duration-200 will-change-transform hover:scale-105 cursor-pointer group">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-200 will-change-transform">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-200">Mission</h3>
-                <p className="text-gray-300">Launch Your BioTech Career</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="mb-12">
-            <a 
-              href="https://forms.gle/6eYCgng3MbXxF7TY7" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
-            >
-              🎯 Join the Bootcamp
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-              </svg>
-            </a>
-          </div>
-
-          {/* Benefits Text */}
-          <div className="max-w-4xl mx-auto">
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">💡 Expert-Led Sessions</span>
-              <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full">🤝 Industry Networking</span>
-              <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full">🚀 Career Acceleration</span>
             </div>
           </div>
         </div>

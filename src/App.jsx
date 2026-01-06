@@ -13,13 +13,16 @@ function App() {
   // Preload critical images on app load
   useEffect(() => {
     const criticalImages = [
-      '/biocom-logo.svg',
+      '/images/osman-hadi.jpg',
       '/images/partners/deepbio.jpg',
       '/images/partners/chiral.jpg',
-      '/images/speakers/jubayer.jpg',
-      '/images/speakers/adib.jpg'
+      '/images/speakers/jubayer.png',
+      '/images/speakers/muhib.png',
+      '/images/speakers/fuad.png',
+      '/images/speakers/musab.png',
+      '/images/speakers/pritom.png'
     ];
-    
+
     preloadImages(criticalImages).catch(console.error);
   }, []);
   return (
