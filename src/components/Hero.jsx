@@ -2,81 +2,80 @@ import { memo } from 'react';
 
 const Hero = memo(() => {
   return (
-    <section id="home" className="bg-gradient-to-br from-gray-900 via-red-950 to-black py-20 relative overflow-hidden">
-      {/* Revolutionary background patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-red-950/30"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
+    <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hpc01.jpg"
+          alt="Bioinformatics Hero"
+          className="w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black"></div>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <div className="text-center mb-12">
-          {/* Memorial Section with Photo */}
-          <div className="mb-12">
-            <div className="max-w-4xl mx-auto bg-gradient-to-br from-red-900/30 to-black/50 backdrop-blur-sm border-2 border-red-600/40 rounded-3xl p-8 shadow-2xl">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                {/* Photo */}
-                <div className="flex-shrink-0">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-red-600 to-amber-600 rounded-2xl blur-xl opacity-50"></div>
-                    <img
-                      src="/images/osman-hadi.jpg"
-                      alt="Shahid Sharif Osman Hadi"
-                      className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border-4 border-red-600/60 shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
-                    />
-                  </div>
-                </div>
+      {/* Animated Gradient Orbs */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/20 rounded-full blur-[120px] -mr-48 -mt-48 animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-600/20 rounded-full blur-[120px] -ml-48 -mb-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-                {/* Memorial Text */}
-                <div className="flex-1 text-left">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-1 h-16 bg-gradient-to-b from-red-600 to-amber-600"></div>
-                    <div>
-                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                        Shahid Sharif Osman Hadi
-                      </h2>
-                      <p className="text-red-400 font-semibold text-lg">
-                        Revolutionary Leader & Martyr
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    In loving memory of a brave soul who gave his life for justice and freedom.
-                    This bootcamp honors his revolutionary spirit and dedication to progress.
-                  </p>
-                  <div className="inline-flex items-center gap-2 bg-red-900/40 border border-red-600/40 px-4 py-2 rounded-lg">
-                    <span className="text-2xl">🕊️</span>
-                    <span className="text-amber-400 font-medium">Forever in Our Hearts</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-red-600/10 border border-red-500/20 px-4 py-2 rounded-full mb-8 backdrop-blur-md">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+            <span className="text-red-400 text-sm font-bold tracking-wider uppercase">Career Guidance Session</span>
           </div>
 
-          {/* Modern Bootcamp Info Section */}
-          <div className="max-w-5xl mx-auto">
-            {/* Organizers */}
-            <div className="mb-8">
-              <p className="text-red-400 font-semibold text-base md:text-lg tracking-wide">
-                DeepBio Limited & CHIRAL Bangladesh Presents
-              </p>
+          {/* Main Content */}
+          <div className="space-y-6">
+            <p className="text-amber-400 font-bold text-lg md:text-xl tracking-[0.2em] uppercase">
+              DeepBio Limited & CHIRAL Bangladesh Presents
+            </p>
+            
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
+              Bioinformatics <br />
+              <span className="bg-gradient-to-r from-red-500 via-amber-500 to-red-500 bg-clip-text text-transparent">
+                Career Guide
+              </span>
+            </h1>
+
+            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+              Navigate your future in computational biology. Join our monthly orientation session held at the end of every month to gain expert insights into global career paths, higher education, and industry trends.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+              <a 
+                href="#register" 
+                className="group relative px-8 py-4 bg-red-600 text-white font-bold rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span className="relative z-10">Secure Your Spot</span>
+              </a>
+              
+              <a 
+                href="#schedule" 
+                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-md border border-white/10 transition-all hover:border-white/30"
+              >
+                View Schedule
+              </a>
             </div>
 
-            {/* Main Title */}
-            <div className="mb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight px-4">
-                <span className="bg-gradient-to-r from-red-400 via-amber-400 to-red-400 bg-clip-text text-transparent">
-                  Bioinformatics BootCamp
-                </span>
-              </h1>
-            </div>
-
-            {/* Memorial Dedication */}
-            <div className="mb-12">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-red-900/30 to-amber-900/30 backdrop-blur-sm border border-red-600/30 px-6 py-3 rounded-full">
-                <span className="text-2xl">🕊️</span>
-                <span className="text-amber-300 font-semibold text-sm md:text-base">
-                  In Memory of Shahid Sharif Osman Hadi
-                </span>
+            {/* Quick Stats/Features */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-16 border-t border-white/10 mt-16">
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">9PM - 11PM</div>
+                <div className="text-gray-500 text-sm uppercase tracking-widest">Monthly</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">Expert</div>
+                <div className="text-gray-500 text-sm uppercase tracking-widest">Mentorship</div>
+              </div>
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-3xl font-bold text-white mb-1">Global</div>
+                <div className="text-gray-500 text-sm uppercase tracking-widest">Exposure</div>
               </div>
             </div>
           </div>

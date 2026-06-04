@@ -21,15 +21,6 @@ const Instructors = memo(() => {
       }
     },
     {
-      name: "Muntasim Fuad",
-      title: "Research Assistant, Big Bioinformatics Lab, CHIRAL",
-      bio: "Mr. Fuad is a Research Assistant at Big Bioinformatics Lab, contributing to bioinformatics research and the development of pipeline applications in healthcare.",
-      image: "/images/speakers/fuad.png",
-      social: {
-        linkedin: "https://www.linkedin.com/in/muntasim-fuad/"
-      }
-    },
-    {
       name: "Musab Shahriar",
       title: "Team Lead, Insilico Medicine, CHIRAL",
       bio: "Mr. Shahriar is a Team Lead at Insilico Medicine, focusing on the application of artificial intelligence in drug discovery and bioinformatics.",

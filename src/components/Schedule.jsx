@@ -1,86 +1,46 @@
+import { memo } from 'react';
+
 const Schedule = () => {
   const scheduleData = [
     {
-      type: "Registration",
-      time: "8:30 – 9:00 AM",
-      event: "Welcome",
-      format: "Check-in & Networking"
-    },
-    {
-      type: "Keynote",
-      time: "9:00 – 9:30 AM", 
-      event: "Welcome & Keynote: Future of Bioinformatics",
-      format: "Presentation"
-    },
-    {
-      type: "Panel",
-      time: "9:30 – 10:30 AM",
-      event: "Career Paths Panel: Academic vs Industry",
-      format: "Panel Discussion"
-    },
-    {
-      type: "Workshop",
-      time: "10:30 – 11:30 AM",
-      event: "Higher Education Pathways", 
-      format: "Interactive Session"
-    },
-    {
-      type: "Break",
-      time: "11:30 – 11:45 AM",
-      event: "Break & Networking",
-      format: "Informal Networking"
-    },
-    {
-      type: "Research",
-      time: "11:45 AM – 12:45 PM",
-      event: "Research Opportunities Showcase",
-      format: "University Presentations"
-    },
-    {
-      type: "Break",
-      time: "12:45 – 1:45 PM",
-      event: "Networking",
-      format: "Open Networking"
+      type: "Welcome",
+      time: "9:00 – 9:10 PM",
+      event: "Opening Remarks & Program Overview",
+      format: "Introduction"
     },
     {
       type: "Industry",
-      time: "1:45 – 2:45 PM", 
-      event: "Industry Spotlight: Job Market Trends",
-      format: "Company Representatives"
+      time: "9:10 – 9:50 PM", 
+      event: "Industry Guide: National & International Markets",
+      format: "Expert Presentation"
     },
     {
-      type: "Skills",
-      time: "2:45 – 3:45 PM",
-      event: "Essential Skills & Tools Demo",
-      format: "Hands-on Demonstration"
+      type: "Research",
+      time: "9:50 – 10:30 PM",
+      event: "Academic Excellence: Global MS & PhD Pathways",
+      format: "Guidelines & Strategies"
     },
     {
       type: "Q&A",
-      time: "3:45 – 4:30 PM",
-      event: "Open Q&A with Experts",
-      format: "Interactive Discussion"
+      time: "10:30 – 10:55 PM",
+      event: "Open Discussion & Career Consultations",
+      format: "Interactive Session"
     },
     {
       type: "Closing",
-      time: "4:30 – 5:00 PM",
-      event: "Closing Remarks & Next Steps",
-      format: "Wrap-up Session"
+      time: "10:55 – 11:00 PM",
+      event: "Closing Remarks & Networking Links",
+      format: "Wrap-up"
     }
   ];
 
   const getTypeColor = (type) => {
     const colors = {
       "Welcome": "bg-red-100 text-red-800",
-      "Keynote": "bg-amber-100 text-amber-800",
-      "Panel": "bg-red-100 text-red-800",
-      "Workshop": "bg-orange-100 text-orange-800",
-      "Break": "bg-gray-100 text-gray-800",
-      "Research": "bg-red-100 text-red-800",
-      "Lunch": "bg-amber-100 text-amber-800",
       "Industry": "bg-red-100 text-red-800",
-      "Skills": "bg-orange-100 text-orange-800",
-      "Q&A": "bg-red-100 text-red-800",
-      "Closing": "bg-amber-100 text-amber-800"
+      "Research": "bg-amber-100 text-amber-800",
+      "Q&A": "bg-orange-100 text-orange-800",
+      "Closing": "bg-gray-100 text-gray-800"
     };
     return colors[type] || "bg-gray-100 text-gray-800";
   };
@@ -89,11 +49,11 @@ const Schedule = () => {
     <section id="schedule" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-900 via-red-950/30 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Bootcamp Schedule</h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 px-4">Complete timeline of our intensive career acceleration day</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Session Schedule</h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 px-4">Our intensive 2-hour career guide breakdown (9 PM – 11 PM)</p>
         </div>
 
-        {/* Desktop Table View - Hidden on Mobile/Tablet */}
+        {/* Desktop Table View */}
         <div className="hidden lg:block bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-red-900/50 hover:shadow-2xl hover:shadow-red-900/20 hover:border-red-500/30 transition-all duration-300">
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -137,7 +97,7 @@ const Schedule = () => {
           </div>
         </div>
 
-        {/* Mobile/Tablet Card View - Shown on screens smaller than lg */}
+        {/* Mobile/Tablet Card View */}
         <div className="lg:hidden space-y-4">
           {scheduleData.map((item, index) => (
             <div key={index} className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-red-900/50 hover:bg-red-900/20 hover:shadow-xl hover:border-red-500/50 transition-all duration-300">

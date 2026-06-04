@@ -9,14 +9,17 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Title */}
-          <a href="#home" className="hover:opacity-80 transition-opacity cursor-pointer">
+          <a href="#" className="hover:opacity-80 transition-opacity cursor-pointer">
             <Logo isLight={false} />
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
+            <a href="#" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
               Home
+            </a>
+            <a href="#focus-areas" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
+              Focus Areas
             </a>
             <a href="#schedule" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
               Schedule
@@ -24,8 +27,8 @@ const Header = () => {
             <a href="#speakers" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
               Speakers
             </a>
-            <a href="#format" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
-              Event Format
+            <a href="#ambassadors" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
+              Ambassadors
             </a>
             <a href="#partners" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
               Partners
@@ -52,8 +55,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-4 space-y-2 bg-gradient-to-br from-gray-900 to-red-950/30 border-t border-red-900/50">
-              <a href="#home" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
+              <a href="#" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
                 Home
+              </a>
+              <a href="#focus-areas" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
+                Focus Areas
               </a>
               <a href="#schedule" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
                 Schedule
@@ -61,8 +67,8 @@ const Header = () => {
               <a href="#speakers" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
                 Speakers
               </a>
-              <a href="#format" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
-                Event Format
+              <a href="#ambassadors" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
+                Ambassadors
               </a>
               <a href="#partners" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
                 Partners
