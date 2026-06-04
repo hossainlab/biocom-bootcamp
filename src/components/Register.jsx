@@ -5,6 +5,19 @@ import Footer from './Footer';
 const Register = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  // Form State
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    month: '',
+    role: '',
+    background: '',
+    institution: '',
+    department: '',
+    referral: '',
+    goal: ''
+  });
 
   // Calculate the last day of the current month
   const today = new Date();
@@ -19,14 +32,35 @@ const Register = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    // LIVE GOOGLE APPS SCRIPT URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyPHEEFz046OxCEENsjktXPr0-rEaoW_Zjb6LuNBEWiUpUn-FNCN6b4A2kDOBrVI4BT/exec';
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Critical for Google Scripts
+        cache: 'no-cache',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       window.scrollTo(0, 0);
-    }, 1500);
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("There was an error submitting the form. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -77,69 +111,79 @@ const Register = () => {
 
           <div className="bg-gray-900/40 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Single Column Form Fields */}
+              {/* Full Name */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
                 <input 
                   required
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
                   type="text" 
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none"
                   placeholder="John Doe"
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
                 <input 
                   required
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   type="email" 
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none"
                   placeholder="john@example.com"
                 />
               </div>
 
+              {/* Month */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Preferred Session Month</label>
                 <select 
                   required
+                  name="month"
+                  value={formData.month}
+                  onChange={handleChange}
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none appearance-none"
                 >
-                  <option value="" disabled selected>Select month</option>
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                  <option value="May">May</option>
-                  <option value="June">June</option>
-                  <option value="July">July</option>
-                  <option value="August">August</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
+                  <option value="" disabled>Select month</option>
+                  {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map(m => (
+                    <option key={m} value={m}>{m}</option>
+                  ))}
                 </select>
               </div>
 
+              {/* Role */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Joining As</label>
                 <select 
                   required
+                  name="role"
+                  value={formData.role}
+                  onChange={handleChange}
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none appearance-none"
                 >
-                  <option value="" disabled selected>Select your role</option>
+                  <option value="" disabled>Select your role</option>
                   <option value="participant">Participant</option>
                   <option value="sponsor">Sponsor</option>
                   <option value="partner">Community Partner</option>
                 </select>
               </div>
 
+              {/* Background */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Academic/Professional Background</label>
                 <select 
                   required
+                  name="background"
+                  value={formData.background}
+                  onChange={handleChange}
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none appearance-none"
                 >
-                  <option value="" disabled selected>Select your background</option>
+                  <option value="" disabled>Select your background</option>
                   <option value="undergrad">Undergraduate Student</option>
                   <option value="grad">Graduate Student (MS)</option>
                   <option value="phd">PhD Scholar</option>
@@ -148,33 +192,45 @@ const Register = () => {
                 </select>
               </div>
 
+              {/* Institution */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Institution / Organization</label>
                 <input 
                   required
+                  name="institution"
+                  value={formData.institution}
+                  onChange={handleChange}
                   type="text" 
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none"
                   placeholder="University or Company Name"
                 />
               </div>
 
+              {/* Department */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Department</label>
                 <input 
                   required
+                  name="department"
+                  value={formData.department}
+                  onChange={handleChange}
                   type="text" 
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none"
                   placeholder="e.g. Genetic Engineering"
                 />
               </div>
 
+              {/* Referral */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Where did you hear about us?</label>
                 <select 
                   required
+                  name="referral"
+                  value={formData.referral}
+                  onChange={handleChange}
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none appearance-none"
                 >
-                  <option value="" disabled selected>Select an option</option>
+                  <option value="" disabled>Select an option</option>
                   <option value="facebook">Facebook</option>
                   <option value="linkedin">LinkedIn</option>
                   <option value="github">GitHub</option>
@@ -185,9 +241,13 @@ const Register = () => {
                 </select>
               </div>
 
+              {/* Goal */}
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">What is your primary goal for this session?</label>
                 <textarea 
+                  name="goal"
+                  value={formData.goal}
+                  onChange={handleChange}
                   rows="3"
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none"
                   placeholder="E.g., Finding PhD opportunities, Industry skill requirements..."
