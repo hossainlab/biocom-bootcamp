@@ -121,6 +121,19 @@ const Register = () => {
               </div>
 
               <div>
+                <label className="block text-sm font-medium text-gray-400 mb-2">Joining As</label>
+                <select 
+                  required
+                  className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all outline-none appearance-none"
+                >
+                  <option value="" disabled selected>Select your role</option>
+                  <option value="participant">Participant</option>
+                  <option value="sponsor">Sponsor</option>
+                  <option value="partner">Community Partner</option>
+                </select>
+              </div>
+
+              <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Academic/Professional Background</label>
                 <select 
                   required
