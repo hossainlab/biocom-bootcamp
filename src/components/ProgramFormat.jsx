@@ -5,7 +5,7 @@ const ProgramFormat = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Session Format</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our intensive 2-hour orientation designed to accelerate your career in bioinformatics and computational biology.
+            Experience our intensive 2-hour orientation designed to accelerate your career in bioinformatics and computational biology—<span className="text-red-500 font-bold">Completely FREE</span>.
           </p>
         </div>
 

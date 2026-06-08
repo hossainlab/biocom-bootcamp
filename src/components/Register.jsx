@@ -104,9 +104,9 @@ const Register = () => {
         <div className="max-w-xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Secure Your <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">Spot</span>
+              Secure Your <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">FREE Spot</span>
             </h1>
-            <p className="text-gray-400">Next Session: <span className="text-amber-400 font-bold">{formattedDate}</span></p>
+            <p className="text-gray-400">Next Session: <span className="text-amber-400 font-bold">{formattedDate}</span> • Cost: <span className="text-green-500 font-bold">100% FREE</span></p>
           </div>
 
           <div className="bg-gray-900/40 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl">

@@ -25,7 +25,7 @@ const Hero = memo(() => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
             </span>
-            <span className="text-red-400 text-sm font-bold tracking-wider uppercase">Career Guidance Session</span>
+            <span className="text-red-400 text-sm font-bold tracking-wider uppercase">100% FREE Career Guidance Session</span>
           </div>
 
           {/* Main Content */}
@@ -42,7 +42,7 @@ const Hero = memo(() => {
             </h1>
 
             <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Navigate your future in computational biology. Join our monthly orientation session held at the end of every month to gain expert insights into global career paths, higher education, and industry trends.
+              Navigate your future in computational biology. Join our monthly orientation session held at the end of every month to gain expert insights into global career paths, higher education, and industry trends—all for free.
             </p>
 
             {/* CTA Buttons */}
@@ -52,7 +52,7 @@ const Hero = memo(() => {
                 className="group relative px-8 py-4 bg-red-600 text-white font-bold rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span className="relative z-10">Secure Your Spot</span>
+                <span className="relative z-10">Join for FREE</span>
               </a>
               
               <a 
@@ -64,10 +64,14 @@ const Hero = memo(() => {
             </div>
 
             {/* Quick Stats/Features */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-16 border-t border-white/10 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-t border-white/10 mt-16">
               <div>
                 <div className="text-3xl font-bold text-white mb-1">9PM - 11PM</div>
                 <div className="text-gray-500 text-sm uppercase tracking-widest">Monthly</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">100% FREE</div>
+                <div className="text-gray-500 text-sm uppercase tracking-widest">No Cost</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-white mb-1">Expert</div>
