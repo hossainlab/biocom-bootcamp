@@ -5,13 +5,47 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
   
   body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-black text-gray-100;
   }
   
   :root {
     color-scheme: dark;
   }
+
+  /* Improved tap targets for mobile */
+  button, a {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center sm:inline-flex sm:min-h-0 sm:min-w-0;
+  }
+
+  /* Optimized Image Rendering */
+  img {
+    content-visibility: auto;
+  }
+}
+
+/* Custom Scrollbar for a premium look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ef444450;
 }

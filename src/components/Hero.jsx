@@ -9,6 +9,8 @@ const Hero = memo(() => {
           src="/images/hpc01.jpg"
           alt="Bioinformatics Hero"
           className="w-full h-full object-cover opacity-60"
+          loading="eager"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black"></div>
       </div>
