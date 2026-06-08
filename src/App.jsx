@@ -6,23 +6,13 @@ import Schedule from './components/Schedule'
 import Instructors from './components/Instructors'
 import Ambassadors from './components/Ambassadors'
 import Partners from './components/Partners'
+import Sponsors from './components/Sponsors'
+import Reviews from './components/Reviews'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
-import Register from './components/Register'
 import { preloadImages } from './utils/performance'
 
 function App() {
-  const [path, setPath] = useState(window.location.hash || '#home');
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      setPath(window.location.hash || '#home');
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
   // Preload critical images on app load
   useEffect(() => {
     const criticalImages = [
@@ -38,10 +28,6 @@ function App() {
     preloadImages(criticalImages).catch(console.error);
   }, []);
 
-  if (path === '#register') {
-    return <Register />;
-  }
-
   return (
     <div className="min-h-screen bg-gray-900 dark text-white">
       <Header />
@@ -52,6 +38,8 @@ function App() {
         <Instructors />
         <Ambassadors />
         <Partners />
+        <Sponsors />
+        <Reviews />
         <FAQ />
       </main>
       <Footer />

@@ -33,11 +33,19 @@ const Header = () => {
             <a href="#partners" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
               Partners
             </a>
+            <a href="#sponsors" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
+              Sponsors
+            </a>
+            <a href="#reviews" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
+              Reviews
+            </a>
             <a href="#faq" className="text-gray-300 hover:text-red-400 font-medium text-sm transition-colors">
               FAQ
             </a>
             <a 
-              href="#register" 
+              href="https://forms.gle/oKYqNMxzN2iakmQQ7"
+              target="_blank"
+              rel="noopener noreferrer" 
               className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-red-900/20"
             >
               Join FREE
@@ -79,12 +87,20 @@ const Header = () => {
               <a href="#partners" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
                 Partners
               </a>
+              <a href="#sponsors" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
+                Sponsors
+              </a>
+              <a href="#reviews" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
+                Reviews
+              </a>
               <a href="#faq" className="text-gray-300 hover:text-red-400 block px-4 py-3 rounded-lg text-base font-medium hover:bg-red-900/20 transition-colors">
                 FAQ
               </a>
               <div className="px-4 py-3">
                 <a 
-                  href="#register" 
+                  href="https://forms.gle/oKYqNMxzN2iakmQQ7"
+                  target="_blank"
+                  rel="noopener noreferrer" 
                   className="block w-full text-center bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-xl text-base font-bold transition-all shadow-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >

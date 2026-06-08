@@ -48,7 +48,9 @@ const Hero = memo(() => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
               <a 
-                href="#register" 
+                href="https://forms.gle/oKYqNMxzN2iakmQQ7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative px-8 py-4 bg-red-600 text-white font-bold rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>

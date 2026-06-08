@@ -4,14 +4,6 @@ const Ambassadors = memo(() => {
   const ambassadors = [
     {
       id: "DBA-2026-0001",
-      name: "Jannatul Mawa Etee",
-      university: "Islamic University, Kushtia",
-      image: "/images/ambassador_photo/IMG_20260301_210347 - Jannatul Mawa ll-21.png",
-      facebook: "https://www.facebook.com/share/1DdzyHFgdc/",
-      linkedin: "https://www.linkedin.com/in/jannatul-mawa-etee-3476a11b5"
-    },
-    {
-      id: "DBA-2026-0002",
       name: "MD. HABIB UN NOBI",
       university: "Jahangirnagar University",
       image: "/images/ambassador_photo/Md. Habib Un Nobi_JU - Md. Habib Un Nobi.jpg",
@@ -19,15 +11,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/md-habib-un-nobi-9b694437a"
     },
     {
-      id: "DBA-2026-0003",
-      name: "Habibur Rahman Naim",
-      university: "Jagannath University",
-      image: "/images/ambassador_photo/Habibur Rahman Naim.JnU - Habibur Rahman Naim.png",
-      facebook: "https://www.facebook.com/share/184avGhg6Y/",
-      linkedin: "https://www.linkedin.com/in/habibur-rahman-naim-762168361"
-    },
-    {
-      id: "DBA-2026-0004",
+      id: "DBA-2026-0002",
       name: "Md Sane Hossain",
       university: "Bangladesh University of Health Sciences",
       image: "/images/ambassador_photo/Md Sane Hossain -BUHS - Md. Sane Hossain.jpg",
@@ -35,79 +19,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/md-sane-hossain-7753371ab"
     },
     {
-      id: "DBA-2026-0005",
-      name: "Habibur Rahman Naim",
-      university: "Jagannath University",
-      image: "/images/ambassador_photo/Habibur Rahman Naim.JnU - Habibur Naiem.png",
-      facebook: "https://www.facebook.com/share/1Kap9Y3fJp/",
-      linkedin: "https://www.linkedin.com/in/habibur-rahman-naim-762168361"
-    },
-    {
-      id: "DBA-2026-0006",
-      name: "Shirsho Saha",
-      university: "Daffodil International University",
-      image: "/images/ambassador_photo/Shirsho Saha_DIU - Shirsho Saha 251-59-005.jpg",
-      facebook: "https://www.facebook.com/share/18hn5AJe7x/",
-      linkedin: "https://www.linkedin.com/in/shirsho-saha-0b51933b6"
-    },
-    {
-      id: "DBA-2026-0007",
-      name: "SAJU MANDAL",
-      university: "Jahangirnagar University",
-      image: "/images/ambassador_photo/ChatGPT Image Apr 13, 2026, 02_24_21 PM - Saju Mandal.png",
-      facebook: "https://www.facebook.com/profile.php?id=100031018788823",
-      linkedin: "https://www.linkedin.com/in/saju-biotech"
-    },
-    {
-      id: "DBA-2026-0008",
-      name: "Faiza Wamea Haque",
-      university: "Brac University",
-      image: "/images/ambassador_photo/Faiza Wamea Haque _Brac University  - Faiza Wamea Haque.jpg",
-      facebook: "https://www.facebook.com/share/1DoJsWyx4m/",
-      linkedin: "https://www.linkedin.com/in/faiza-wamea-haque-68b108244"
-    },
-    {
-      id: "DBA-2026-0009",
-      name: "Sadia Tasnim Upoma",
-      university: "Independent University, Bangladesh",
-      image: "/images/ambassador_photo/IMG_20260413_200135 - Sadia Tasnim Upoma.jpg",
-      facebook: "https://www.facebook.com/sadia.tasnim.upoma",
-      linkedin: "https://www.linkedin.com/in/sadia-tasnim-upoma-0a406a402"
-    },
-    {
-      id: "DBA-2026-0010",
-      name: "Salman Masud",
-      university: "BRAC University",
-      image: "/images/ambassador_photo/Salman Masud_BRACU - Salman Masud.jpg",
-      facebook: "https://www.facebook.com/share/1E9zBV5s4z/",
-      linkedin: "https://www.linkedin.com/in/salman-masud-017072344"
-    },
-    {
-      id: "DBA-2026-0011",
-      name: "Md. Tariqul Islam",
-      university: "Jashore University of Science and Technology",
-      image: "/images/ambassador_photo/Tariqulislam_JUST - Md.Tariqul Islam.png",
-      facebook: "https://www.facebook.com/share/1ApkyR3928/",
-      linkedin: "https://www.linkedin.com/in/md-tariqul-islam-398790259"
-    },
-    {
-      id: "DBA-2026-0012",
-      name: "Sonunigam Sutradhar Sonnet",
-      university: "University of Dhaka",
-      image: "/images/ambassador_photo/Sonunigamsonnet_DU - Sonunigam Sonnet.jpg",
-      facebook: "https://www.facebook.com/share/18GG4tnVDt/",
-      linkedin: "https://www.linkedin.com/in/sonnetdhar"
-    },
-    {
-      id: "DBA-2026-0013",
-      name: "Fatima Sultana",
-      university: "Khulna University",
-      image: "/images/ambassador_photo/IMG20260129172328 - Fatima Sultana.heic",
-      facebook: "https://www.facebook.com/share/1KizQ3zpjr/",
-      linkedin: null
-    },
-    {
-      id: "DBA-2026-0014",
+      id: "DBA-2026-0003",
       name: "Nafisa Nawal",
       university: "National University (Chittagong College)",
       image: "/images/ambassador_photo/picture nafisa  - Nafisa Nawal.jpeg",
@@ -115,47 +27,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/nnawal/"
     },
     {
-      id: "DBA-2026-0015",
-      name: "Md. Younus Kabir",
-      university: "Shahjalal University of Science and Technology",
-      image: "/images/ambassador_photo/MdYounusKabir_SUST - Md. Younus Kabir.png",
-      facebook: "https://www.facebook.com/younuskabir.hridoy/",
-      linkedin: "https://www.linkedin.com/in/md-younus-kabir-5707b11a5/"
-    },
-    {
-      id: "DBA-2026-0016",
-      name: "Sweety Akter",
-      university: "Brac University",
-      image: "/images/ambassador_photo/SweetyAkter_BRACU - Sweety Akter.jpg",
-      facebook: "https://www.facebook.com/alex.tanhaa.5/",
-      linkedin: "https://www.linkedin.com/in/sweety-akter-6b11b0286"
-    },
-    {
-      id: "DBA-2026-0017",
-      name: "Afiya Anjum",
-      university: "University Of Science And Technology Chittagong",
-      image: "/images/ambassador_photo/AfiyaAnjum_USTC - Afiya Anjum.jpg",
-      facebook: "https://www.facebook.com/share/1CEsnyt1EP/",
-      linkedin: "https://www.linkedin.com/in/afiya-anjum-8ba61032a"
-    },
-    {
-      id: "DBA-2026-0018",
-      name: "Md. Nazmul Hasan",
-      university: "Shamoly Engineering College",
-      image: "/images/ambassador_photo/Md.NazmulHasan_ShEC - nazmul. hasan.jpg",
-      facebook: "https://www.facebook.com/mdnazmulhasan.ontor.7",
-      linkedin: "https://www.linkedin.com/in/mnh24"
-    },
-    {
-      id: "DBA-2026-0019",
-      name: "Shirsho Saha",
-      university: "Daffodil International University",
-      image: "/images/ambassador_photo/Shirsho Saha_DIU - Shirsho Saha 251-59-005(1).jpg",
-      facebook: "https://www.facebook.com/share/1F89wUkRW9/",
-      linkedin: "https://www.linkedin.com/in/shirsho-saha-0b51933b6"
-    },
-    {
-      id: "DBA-2026-0020",
+      id: "DBA-2026-0004",
       name: "MD Towfiqul Islam",
       university: "North South University",
       image: "/images/ambassador_photo/TowfiqulIslam_NSU - 8433 Towfiqul Islam.jpg",
@@ -163,47 +35,23 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/towfiqul-islam-88075789"
     },
     {
-      id: "DBA-2026-0021",
-      name: "Ankit Saha",
-      university: "BRAC University",
-      image: "/images/ambassador_photo/Ankit Saha_BracU - Ankit Saha.jpg",
-      facebook: "https://www.facebook.com/ankit.saha.455211/",
-      linkedin: null
-    },
-    {
-      id: "DBA-2026-0022",
-      name: "Salman Masud",
-      university: "BRAC University",
-      image: "/images/ambassador_photo/Salman Masud_BRACU - Salman Masud(1).jpg",
-      facebook: "https://www.facebook.com/share/1ED4XP3urN/",
-      linkedin: "https://www.linkedin.com/in/salman-masud-017072344"
-    },
-    {
-      id: "DBA-2026-0023",
+      id: "DBA-2026-0005",
       name: "Md. Tariqul Islam",
       university: "Jashore University of Science and Technology",
-      image: "/images/ambassador_photo/Tariqulislam_JUST - tariqul islam.png",
-      facebook: "https://www.facebook.com/share/1UEVDmHYhy/",
+      image: "/images/ambassador_photo/Tariqulislam_JUST - Md.Tariqul Islam.png",
+      facebook: "https://www.facebook.com/share/1ApkyR3928/",
       linkedin: "https://www.linkedin.com/in/md-tariqul-islam-398790259"
     },
     {
-      id: "DBA-2026-0024",
-      name: "Md. Anamul Hasan Wasi",
-      university: "Shahjalal University of Science and Technology",
-      image: "/images/ambassador_photo/MdAnamulHasanWasi_SUST - Anamul Hasan Wasi.jpg",
-      facebook: "https://www.facebook.com/share/1HMB57JhXB/",
-      linkedin: null
+      id: "DBA-2026-0006",
+      name: "Salman Masud",
+      university: "BRAC University",
+      image: "/images/ambassador_photo/Salman Masud_BRACU - Salman Masud.jpg",
+      facebook: "https://www.facebook.com/share/1E9zBV5s4z/",
+      linkedin: "https://www.linkedin.com/in/salman-masud-017072344"
     },
     {
-      id: "DBA-2026-0025",
-      name: "Afiya Anjum",
-      university: "University Of Science And Technology Chittagong",
-      image: "/images/ambassador_photo/AfiyaAnjum_USTC - Afiya Anjum(1).jpg",
-      facebook: "https://www.facebook.com/share/1Dw5np3TUt/",
-      linkedin: "https://www.linkedin.com/in/afiya-anjum-8ba61032a"
-    },
-    {
-      id: "DBA-2026-0026",
+      id: "DBA-2026-0007",
       name: "Md. Ashikur Rahman",
       university: "Bangladesh Agricultural University",
       image: "/images/ambassador_photo/MdAshikurRahman_BAU - Md. Ashikur Rahman.jpg",
@@ -211,7 +59,23 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/md-ashikur-rahman-52b034332"
     },
     {
-      id: "DBA-2026-0027",
+      id: "DBA-2026-0008",
+      name: "Sweety Akter",
+      university: "Brac University",
+      image: "/images/ambassador_photo/SweetyAkter_BRACU - Sweety Akter.jpg",
+      facebook: "https://www.facebook.com/alex.tanhaa.5/",
+      linkedin: "https://www.linkedin.com/in/sweety-akter-6b11b0286"
+    },
+    {
+      id: "DBA-2026-0009",
+      name: "Jannatul Mawa Etee",
+      university: "Islamic University, Kushtia",
+      image: "/images/ambassador_photo/IMG_20260301_210347 - Jannatul Mawa ll-21.png",
+      facebook: "https://www.facebook.com/share/1DdzyHFgdc/",
+      linkedin: "https://www.linkedin.com/in/jannatul-mawa-etee-3476a11b5"
+    },
+    {
+      id: "DBA-2026-0010",
       name: "Sharmin Sultana Lincoln",
       university: "Military Institute of Science & Technology",
       image: "/images/ambassador_photo/Sharmin_Sultana_Lincoln_MIST - Sharmin Sultana Lincoln.jpeg",
@@ -219,7 +83,39 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/sharmin-sultana-lincoln-966462370"
     },
     {
-      id: "DBA-2026-0028",
+      id: "DBA-2026-0011",
+      name: "Habibur Rahman Naim",
+      university: "Jagannath University",
+      image: "/images/ambassador_photo/Habibur Rahman Naim.JnU - Habibur Rahman Naim.png",
+      facebook: "https://www.facebook.com/share/184avGhg6Y/",
+      linkedin: "https://www.linkedin.com/in/habibur-rahman-naim-762168361"
+    },
+    {
+      id: "DBA-2026-0012",
+      name: "Shirsho Saha",
+      university: "Daffodil International University",
+      image: "/images/ambassador_photo/Shirsho Saha_DIU - Shirsho Saha 251-59-005.jpg",
+      facebook: "https://www.facebook.com/share/18hn5AJe7x/",
+      linkedin: "https://www.linkedin.com/in/shirsho-saha-0b51933b6"
+    },
+    {
+      id: "DBA-2026-0013",
+      name: "Ankit Saha",
+      university: "BRAC University",
+      image: "/images/ambassador_photo/Ankit Saha_BracU - Ankit Saha.jpg",
+      facebook: "https://www.facebook.com/ankit.saha.455211/",
+      linkedin: null
+    },
+    {
+      id: "DBA-2026-0014",
+      name: "Md. Anamul Hasan Wasi",
+      university: "Shahjalal University of Science and Technology",
+      image: "/images/ambassador_photo/MdAnamulHasanWasi_SUST - Anamul Hasan Wasi.jpg",
+      facebook: "https://www.facebook.com/share/1HMB57JhXB/",
+      linkedin: null
+    },
+    {
+      id: "DBA-2026-0015",
       name: "Moriom Islam Mim",
       university: "Bangladesh University of Health Sciences",
       image: "/images/ambassador_photo/Moriom Islam _ Bangladesh University of Health Sciences - Moriom Islam.jpg",
@@ -227,39 +123,31 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/moriom-islam-mim"
     },
     {
-      id: "DBA-2026-0029",
-      name: "Arefin Naher Oishee",
-      university: "Dinajpur Medical College",
-      image: "/images/ambassador_photo/Arefin Naher Oishee_DjMC - Arefin Naher.jpg",
-      facebook: "https://www.facebook.com/share/1JMJ2i5Z9t/",
-      linkedin: "https://www.linkedin.com/in/arefin-naher-oishee-79434425a"
-    },
-    {
-      id: "DBA-2026-0030",
+      id: "DBA-2026-0016",
       name: "Saju Mandal",
       university: "Jahangirnagar University",
-      image: "/images/ambassador_photo/ChatGPT Image Apr 13, 2026, 02_24_21 PM(1) - Saju Mandal.png",
+      image: "/images/ambassador_photo/ChatGPT Image Apr 13, 2026, 02_24_21 PM - Saju Mandal.png",
       facebook: "https://www.facebook.com/profile.php?id=100031018788823",
       linkedin: "https://www.linkedin.com/in/saju-biotech"
     },
     {
-      id: "DBA-2026-0031",
-      name: "Afiya Anjum",
-      university: "University Of Science And Technology Chittagong",
-      image: "/images/ambassador_photo/AfiyaAnjum_USTC - Afiya Anjum(2).jpg",
-      facebook: "https://www.facebook.com/share/18e6zuQrvE/",
-      linkedin: "https://www.linkedin.com/in/afiya-anjum-8ba61032a"
+      id: "DBA-2026-0017",
+      name: "Md. Nazmul Hasan",
+      university: "Shamoly Engineering College",
+      image: "/images/ambassador_photo/Md.NazmulHasan_ShEC - nazmul. hasan.jpg",
+      facebook: "https://www.facebook.com/mdnazmulhasan.ontor.7",
+      linkedin: "https://www.linkedin.com/in/mnh24"
     },
     {
-      id: "DBA-2026-0032",
-      name: "Md. Anamul Hasan Wasi",
-      university: "Shahjalal University of Science and Technology",
-      image: "/images/ambassador_photo/20251030_120821 - Anamul Hasan Wasi.jpg",
-      facebook: "https://www.facebook.com/share/1Gb3K3X7ix/",
-      linkedin: "https://www.linkedin.com/in/anamul-hasan-wasi-84a197364"
+      id: "DBA-2026-0018",
+      name: "Faiza Wamea Haque",
+      university: "Brac University",
+      image: "/images/ambassador_photo/Faiza Wamea Haque _Brac University  - Faiza Wamea Haque.jpg",
+      facebook: "https://www.facebook.com/share/1DoJsWyx4m/",
+      linkedin: "https://www.linkedin.com/in/faiza-wamea-haque-68b108244"
     },
     {
-      id: "DBA-2026-0033",
+      id: "DBA-2026-0019",
       name: "MD. Sal Sabil Anwar",
       university: "BRAC University",
       image: "/images/ambassador_photo/Md.SalSabilAnwar_BRACU - MD. SAL SABIL ANWAR.jpg",
@@ -267,7 +155,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/salsabil-anwar-t4a007"
     },
     {
-      id: "DBA-2026-0034",
+      id: "DBA-2026-0020",
       name: "MD. SHAKAWAT HOSSAIN",
       university: "Shahjalal University of Science And Technology",
       image: "/images/ambassador_photo/ShakawatHossain_SUST.jpg - shakawat hossain.jpeg",
@@ -275,7 +163,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/md-shakawat-hossain-372143378/"
     },
     {
-      id: "DBA-2026-0035",
+      id: "DBA-2026-0021",
       name: "Ellina Tasneem Bushra",
       university: "University of Rajshahi",
       image: "/images/ambassador_photo/EllinaTasneemBushra_RU - Sakib Al Hasan.jpg",
@@ -283,7 +171,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/ellina-tasneem-bushra-453ab6386"
     },
     {
-      id: "DBA-2026-0036",
+      id: "DBA-2026-0022",
       name: "Sadia Sultana Mim",
       university: "University of Rajshahi",
       image: "/images/ambassador_photo/inbound4528769483021909120 - Sadia Mim.jpg",
@@ -291,7 +179,7 @@ const Ambassadors = memo(() => {
       linkedin: "https://www.linkedin.com/in/sadia-mim-240931279"
     },
     {
-      id: "DBA-2026-0037",
+      id: "DBA-2026-0023",
       name: "Sanjida Mazumder",
       university: "Cumilla Medical College",
       image: "/images/ambassador_photo/IMG_1479~2 (1).JPG - Sanjida Mazumder.png",
@@ -299,7 +187,7 @@ const Ambassadors = memo(() => {
       linkedin: null
     },
     {
-      id: "DBA-2026-0038",
+      id: "DBA-2026-0024",
       name: "Nazifa Rounak Ushna",
       university: "University of Rajshahi",
       image: "/images/ambassador_photo/IMG_20251125_134427 - Feorella Firoza.jpg",
@@ -319,7 +207,7 @@ const Ambassadors = memo(() => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Campus Ambassadors</h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
-            Meet our dedicated network of 38 ambassadors representing DeepBio across premier universities. They bridge the gap between bioinformatics expertise and student communities nationwide.
+            Meet our dedicated network of 24 ambassadors representing DeepBio across premier universities. They bridge the gap between bioinformatics expertise and student communities nationwide.
           </p>
         </div>
 
