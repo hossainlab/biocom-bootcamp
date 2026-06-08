@@ -41,8 +41,8 @@ const Footer = memo(() => {
             <div className="mb-4">
               <Logo isLight={false} className="scale-90 origin-left" />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Navigate your bioinformatics career with expert guidance. Join our monthly orientation held at the end of every month.
+            <p className="text-gray-400 mb-8 leading-relaxed">
+              Navigate your future with the DeepBio Bioinformatics Career Guide. Join our monthly orientation held at the end of every month.
             </p>
             <div className="flex gap-4">
               <a href="https://www.linkedin.com/company/chiral-bangladesh/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors" title="LinkedIn">

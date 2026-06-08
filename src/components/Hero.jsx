@@ -35,8 +35,9 @@ const Hero = memo(() => {
             </p>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
-              Bioinformatics <br />
+              <span className="text-red-500">DeepBio</span> <br />
               <span className="bg-gradient-to-r from-red-500 via-amber-500 to-red-500 bg-clip-text text-transparent">
+                Bioinformatics <br />
                 Career Guide
               </span>
             </h1>
